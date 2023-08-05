@@ -1,10 +1,10 @@
-public class Student {
+public class Main {
     private String name;
     private int rollNumber;
     private int marks;
     private double gpa;
 
-    public Student(String name, int rollNumber, int marks) {
+    public Main(String name, int rollNumber, int marks) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.marks = marks;
@@ -12,18 +12,8 @@ public class Student {
     }
 
     private double calculateGPA() {
-        // Assuming a 4.0 scale and 100 point grading system
-        if (marks >= 90) {
-            return 4.0;
-        } else if (marks >= 80) {
-            return 3.0;
-        } else if (marks >= 70) {
-            return 2.0;
-        } else if (marks >= 60) {
-            return 1.0;
-        } else {
-            return 0.0;
-        }
+        // Assuming a scale of 0-100 for marks and 0-4 for GPA
+        return (double) marks / 25;
     }
 
     public void displayDetails() {
@@ -31,5 +21,11 @@ public class Student {
         System.out.println("Roll Number: " + rollNumber);
         System.out.println("Marks: " + marks);
         System.out.println("GPA: " + gpa);
+    }
+
+    public static void main(String[] args) {
+        Main student = new Main("Priya Sinha", 12, 97);
+        student.displayDetails();
+
     }
 }
