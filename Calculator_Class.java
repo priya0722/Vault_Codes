@@ -17,4 +17,20 @@ public class Calculator {
         }
         return a / b;
     }
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+int sum = calculator.add(1, 2);{
+    System.out.println("Sum "+sum);
 }
+int difference = calculator.subtract(3, 1);{
+    System.out.println("Difference "+difference);
+}
+int product = calculator.multiply(2, 3);{
+    System.out.println("Product "+product);
+}
+int quotient = calculator.divide(6, 2);{
+    System.out.println("Quotient "+quotient);
+}
+    }
+}
+
