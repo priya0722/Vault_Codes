@@ -1,3 +1,5 @@
+import javax.xml.stream.events.StartDocument;
+
 public class Student {
     private String name;
     private int rollNumber;
@@ -14,5 +16,10 @@ public class Student {
         System.out.println("Roll Number: " + rollNumber);
         System.out.println("Marks: " + marks);
     }
-}
 
+    public static void main(String[] args) {
+        Student student = new Student("Priya Sinha", 12, 97);
+        student.displayDetails();
+
+    }
+}
